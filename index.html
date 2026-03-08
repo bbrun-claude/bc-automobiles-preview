@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.C Automobiles — Garage Automobile &amp; Carrosserie | Le Poinçonnet - Châteauroux</title>
+<meta name="description" content="B.C Automobiles — Garage automobile, carrosserie, vente véhicules d'occasion au Poinçonnet près de Châteauroux (36). Débosselage, réfection jantes, mécanique. Depuis 2006.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#E61005;--dark:#1A1A1A;--metal:#2A2A2A;--silver:#B0B0B0;--light:#F5F5F5;--cream:#FFFAF8}
+body{font-family:'Source Sans 3',sans-serif;color:var(--dark);background:var(--cream)}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+a{color:var(--red);text-decoration:none}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,26,.97);backdrop-filter:blur(8px);padding:12px 0;border-bottom:2px solid var(--red)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{height:44px}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#fff;font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;transition:color .3s}
+.nav-links a:hover{color:var(--red)}
+.nav-cta{background:var(--red);color:#fff!important;padding:8px 20px;border-radius:4px;transition:background .3s}
+.nav-cta:hover{background:#c40d04}
+
+/* HERO */
+.hero{margin-top:66px;position:relative;min-height:85vh;display:flex;align-items:center;background:var(--dark);overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:url('img/fb-logo.jpg') center/cover;opacity:.35}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--dark) 45%,transparent 100%)}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:0 24px;width:100%}
+.hero-badge{display:inline-block;background:var(--red);color:#fff;font-family:'Montserrat',sans-serif;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:6px 16px;border-radius:2px;margin-bottom:20px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px}
+.hero h1 span{color:var(--red)}
+.hero-sub{font-size:1.15rem;color:var(--silver);max-width:520px;line-height:1.6;margin-bottom:32px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 32px;font-family:'Montserrat',sans-serif;font-size:.9rem;font-weight:700;border-radius:4px;transition:all .3s;cursor:pointer;border:none}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:#c40d04;transform:translateY(-2px)}
+.btn-outline{border:2px solid var(--silver);color:#fff;background:transparent}
+.btn-outline:hover{border-color:var(--red);color:var(--red)}
+
+/* SECTIONS */
+section{padding:80px 24px}
+.container{max-width:1100px;margin:0 auto}
+.section-title{text-align:center;margin-bottom:56px}
+.section-title h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;color:var(--dark);margin-bottom:12px}
+.section-title .bar{width:60px;height:4px;background:var(--red);margin:0 auto 16px}
+.section-title p{font-size:1.05rem;color:#666;max-width:600px;margin:0 auto}
+
+/* SERVICES */
+.services{background:var(--light)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.service-card{background:#fff;border-radius:8px;padding:36px 28px;border-left:4px solid var(--red);box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.service-icon{font-size:2rem;margin-bottom:16px}
+.service-card h3{font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--dark)}
+.service-card p{color:#555;line-height:1.6;font-size:.95rem}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-img{border-radius:8px;overflow:hidden;position:relative}
+.about-img img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.about-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--red)}
+.about-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:8px}
+.about-text .bar{width:50px;height:4px;background:var(--red);margin-bottom:20px}
+.about-text p{color:#555;line-height:1.7;margin-bottom:16px}
+.about-stats{display:flex;gap:32px;margin-top:24px}
+.stat{text-align:center}
+.stat-num{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:var(--red)}
+.stat-label{font-size:.85rem;color:#666;margin-top:4px}
+
+/* GALLERY */
+.gallery{background:var(--dark);color:#fff}
+.gallery .section-title h2{color:#fff}
+.gallery .section-title p{color:var(--silver)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.gallery-item{border-radius:8px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-size:.9rem;font-weight:600}
+
+/* PARTNER */
+.partner{background:var(--light)}
+.partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.partner-card{background:#fff;border-radius:8px;padding:32px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.partner-card h3{font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+.partner-card p{color:#555;line-height:1.6;font-size:.95rem}
+
+/* CONTACT */
+.contact{background:linear-gradient(135deg,var(--dark),var(--metal))}
+.contact .section-title h2{color:#fff}
+.contact .section-title p{color:var(--silver)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-info{color:#fff}
+.contact-item{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.contact-icon{width:44px;height:44px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem}
+.contact-item h4{font-size:1rem;font-weight:700;margin-bottom:4px}
+.contact-item p{color:var(--silver);font-size:.95rem;line-height:1.5}
+.contact-map{border-radius:8px;overflow:hidden;min-height:300px}
+.contact-map iframe{width:100%;height:100%;min-height:300px;border:0}
+
+/* FOOTER */
+footer{background:#111;color:var(--silver);text-align:center;padding:32px 24px;font-size:.85rem}
+footer a{color:var(--red)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero{min-height:70vh}
+  .hero::before{width:100%;opacity:.2}
+  .hero::after{background:linear-gradient(180deg,var(--dark) 20%,transparent 100%)}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-stats{justify-content:center}
+  .partner-grid{grid-template-columns:1fr}
+  section{padding:56px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="nav-inner">
+  <img src="img/d79ff07ffc73476298277466dd1b7016.png" alt="B.C Automobiles" class="nav-logo">
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#garage">Le garage</a></li>
+    <li><a href="#realisations">Nos prestations</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+  <div class="hero-badge">Garage automobile — Le Poinçonnet / Châteauroux</div>
+  <h1>Votre garage <span>multimarques</span><br>depuis 2006</h1>
+  <p class="hero-sub">Vente de véhicules d'occasion, carrosserie, mécanique, débosselage sans peinture. Une équipe de professionnels à votre service.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn btn-primary">Nous contacter</a>
+    <a href="#services" class="btn btn-outline">Nos services</a>
+  </div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+<div class="container">
+  <div class="section-title">
+    <div class="bar"></div>
+    <h2>Nos services</h2>
+    <p>Un garage complet pour l'entretien, la réparation et la mise en beauté de votre véhicule</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">&#x1F697;</div>
+      <h3>Vente véhicules d'occasion</h3>
+      <p>Large choix de véhicules d'occasion toutes marques, révisés et garantis. Partenaire du réseau Distinxion pour vous offrir les meilleures opportunités.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F527;</div>
+      <h3>Mécanique générale</h3>
+      <p>Entretien courant, révisions, diagnostic électronique, freins, distribution, embrayage. Toutes marques, tous modèles.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F3A8;</div>
+      <h3>Carrosserie &amp; peinture</h3>
+      <p>Réparation de carrosserie, redressage, peinture complète ou partielle. Travail soigné dans le respect des normes constructeurs.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x2728;</div>
+      <h3>Débosselage sans peinture</h3>
+      <p>Technique PDR (Paintless Dent Repair) pour éliminer les bosses et impacts de grêle sans altérer la peinture d'origine de votre véhicule.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F6DE;</div>
+      <h3>Réfection de jantes</h3>
+      <p>Rénovation complète de vos jantes aluminium : décapage, ponçage, peinture et vernis. Un résultat comme neuf pour sublimer votre véhicule.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">&#x1F6E1;</div>
+      <h3>Pare-brise &amp; pneumatiques</h3>
+      <p>Remplacement et réparation de pare-brise. Vente et montage de pneumatiques toutes saisons, équilibrage et géométrie.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="garage">
+<div class="container">
+  <div class="about-grid">
+    <div class="about-img">
+      <img src="img/fb-logo.jpg" alt="B.C Automobiles — façade du garage au Poinçonnet">
+    </div>
+    <div class="about-text">
+      <h2>B.C Automobiles</h2>
+      <div class="bar"></div>
+      <p>Installé au Poinçonnet depuis 2006, B.C Automobiles est un garage indépendant dirigé par Christophe Ménétrier. Notre équipe de professionnels prend en charge votre véhicule de A à Z : mécanique, carrosserie, vente de véhicules d'occasion.</p>
+      <p>Partenaire du réseau <strong>Distinxion</strong> pour la vente de véhicules d'occasion et distributeur <strong>Cheval Liberté</strong> pour les remorques et vans, nous vous proposons un service complet et de qualité.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">2006</div>
+          <div class="stat-label">Année de création</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">6+</div>
+          <div class="stat-label">Collaborateurs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Multimarques</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="realisations">
+<div class="container">
+  <div class="section-title">
+    <div class="bar"></div>
+    <h2>Nos prestations en images</h2>
+    <p>Quelques exemples de notre savoir-faire au quotidien</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="img/2ef070ea4f0646f298686d9502c6998cf003.jpg" alt="Réfection de jante aluminium noire — finition brillante">
+      <div class="gallery-caption">Réfection de jante — finition noire brillante</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/ce960b0f636849adae062fa7eb2b5cfef000.jpg" alt="Débosselage sans peinture — technique PDR">
+      <div class="gallery-caption">Débosselage sans peinture (PDR)</div>
+    </div>
+    <div class="gallery-item">
+      <img src="img/cf6ec9720d264d8dacce762c6f8858daf000.jpg" alt="Contrôle carrosserie — détection de défauts">
+      <div class="gallery-caption">Contrôle et détection de défauts carrosserie</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partner" id="partenaires">
+<div class="container">
+  <div class="section-title">
+    <div class="bar"></div>
+    <h2>Nos partenaires</h2>
+    <p>Des réseaux de confiance pour vous garantir qualité et sérieux</p>
+  </div>
+  <div class="partner-grid">
+    <div class="partner-card">
+      <h3>Distinxion</h3>
+      <p>Réseau national de vente de véhicules d'occasion sélectionnés. Chaque véhicule est révisé, garanti et livré avec un carnet d'entretien complet.</p>
+    </div>
+    <div class="partner-card">
+      <h3>Cheval Liberté</h3>
+      <p>Fabricant français de remorques et vans pour chevaux. B.C Automobiles est distributeur agréé pour la région Centre-Val de Loire.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="container">
+  <div class="section-title">
+    <div class="bar"></div>
+    <h2>Contactez-nous</h2>
+    <p>Devis gratuit pour toute intervention carrosserie ou mécanique</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item">
+        <div class="contact-icon">&#x1F4CD;</div>
+        <div>
+          <h4>Adresse</h4>
+          <p>69bis Rue du Cantinier<br>36330 Le Poinçonnet</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">&#x1F4DE;</div>
+        <div>
+          <h4>Téléphone</h4>
+          <p>02 54 07 00 47</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">&#x2709;</div>
+        <div>
+          <h4>Email</h4>
+          <p>bcautomobiles36@gmail.com</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">&#x1F552;</div>
+        <div>
+          <h4>Horaires</h4>
+          <p>Lundi au vendredi : 9h00 - 12h00 / 14h00 - 18h00<br>Samedi et dimanche : fermé</p>
+        </div>
+      </div>
+    </div>
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2773.5!2d1.6993!3d46.7683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fadfc8e3e5d0d5%3A0x0!2s69bis+Rue+du+Cantinier+36330+Le+Poin%C3%A7onnet!5e0!3m2!1sfr!2sfr!4v1" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 B.C Automobiles — 69bis Rue du Cantinier, 36330 Le Poinçonnet — <a href="tel:0254070047">02 54 07 00 47</a></p>
+</footer>
+
+</body>
+</html>
